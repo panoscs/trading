@@ -1,0 +1,606 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-nav {
+    background-color: #000000;
+    padding-left: 140px;
+    padding-right: 140px;
+    width: 100%;
+}
+
+.text-secondary {
+    color: #999999 !important;
+}
+
+.bg-custom-gray {
+    background-color: #d3d3d3 !important; 
+}
+
+#submitBtn {
+    width: 307px;
+    height: 54px;
+}
+
+.top-nav {
+    background-color: #000000;
+    padding-left: 140px;
+    padding-right: 140px;
+    height: 40px;
+}
+
+.flag-icon {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.over-text {
+    color: #A8A8A8;
+    font-size: small;
+}
+
+.custom-card {
+    width: 730px !important;
+    height: 437px !important;
+}
+
+
+.form-check-label {
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.34px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.privacy {
+    color: crimson;
+    text-decoration: none;
+}
+
+.terms {
+    color: crimson;
+    text-decoration: none;
+}
+
+#submitBtn {
+    width: 50% !important;
+    margin: auto;
+}
+
+#registerBtn {
+    width: 120px !important;
+    background-color: rgb(21, 125, 68) !important;
+}
+
+#registerBtn:hover {
+    width: 120px !important;
+    background-color: rgb(16, 99, 53) !important;
+}
+
+.ms-auto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#loginBtn {
+    color: white !important;
+    background-color: rgb(172, 56, 36) !important;
+    border: none;
+}
+
+#loginBtn:hover {
+    color: white !important;
+    background-color: rgb(150, 50, 32) !important;
+    border: none;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.main-background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(29, 28, 28, 0.9)), url('images/money.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.main-background h1 {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-background h1 .gold-text {
+    background: linear-gradient(90deg, #FCD678 10%, #E1AC49 40%, #BC8C2F 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+.main-background h1 .white-text {
+    color: white;
+    font-weight: 700;
+}
+
+.myHeader {
+    font-family: Sofia Sans Condensed, sans-serif;
+    font-size: 70px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32.68px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #A8A8A8 !important;
+}
+
+.btn-outline-secondary {
+    color: white !important;
+}
+
+.main-content-h2 {
+    font-family: Sofia Sans Condensed;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.mobile-img {
+    width: 628px;
+    height: 626px;
+}
+
+.account-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #F4F4F4;
+}
+
+.account-section i {
+    color: #666;
+    width: 100px;
+    height: 100px;
+}
+
+.account-section p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.winner-box {
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: start;
+    border-radius: 20px;
+}
+
+.winner-box .trophy-section {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winner-box .trophy-section i {
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
+    color: #000000;
+}
+
+.winner-box .content-section {
+    width: 80%;
+    padding-left: 20px;
+}
+
+.winner-box .content-section .winner-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.51px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    background: linear-gradient(90deg, #FCD678 10%, #E1AC49 40%, #BC8C2F 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ /* Jello Animation */
+@keyframes jello-animation {
+0% {
+    transform: scale3d(1, 1, 1);
+}
+30% {
+    transform: scale3d(1.25, 0.75, 1);
+}
+40% {
+    transform: scale3d(0.75, 1.25, 1);
+}
+50% {
+    transform: scale3d(1.15, 0.85, 1);
+}
+65% {
+    transform: scale3d(0.95, 1.05, 1);
+}
+75% {
+    transform: scale3d(1.05, 0.95, 1);
+}
+100% {
+    transform: scale3d(1, 1, 1);
+}
+}
+
+.social-icons i {
+    display: inline-block;
+}
+
+/* Apply Jello Animation on Hover */
+.social-icons a:hover i {
+animation: jello-animation 0.9s ease-in-out;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+
+    /* Custom Card layout adjustments */
+    .custom-card {
+        --padding: 2rem;
+        width: 100% - var(--padding) !important;
+        height: auto !important;
+    }
+
+    /* Hide divider in small device view */
+    .divider {
+        display: none !important;
+    }
+
+    /* Form layout adjustments */
+    .col-md-6,
+    .col-md-2,
+    .col-md-4 {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    #country,
+    #phoneCode,
+    #phone,
+    #firstName,
+    #lastName,
+    #email,
+    #experience {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .account-section {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* Style navbar-nav for small device view */
+    .navbar-nav {
+        display: none !important;
+        flex-direction: column !important;
+        width: 50%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #000;
+        padding: 20px 0;
+        z-index: 1000;
+        align-items: center;
+    }
+
+    /* Style top-nav-items for small device view */
+    .top-nav-items {
+        display: none !important;
+        flex-direction: column !important;
+        width: 51%;
+        height: 240px;
+        position: absolute;
+        top: 106px;
+        right: 0;
+        background: #000;
+        padding: 20px;
+        z-index: 999;
+        align-items: flex-end;
+    }
+
+    /* Show navbar-nav and top-nav-items when toggled */
+    .navbar-nav.show,
+    .top-nav-items.show {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .top-nav-items>* {
+        margin-bottom: 15px;
+    }
+
+    /* Show toggle button in small device view */
+    .toggle-btn {
+        display: block !important;
+    }
+
+}
+
+/* Hide top-nav-menu by default */
+.top-nav-menu {
+    display: none;
+}
+
+.toggle-btn {
+    display: none;
+    background: none;
+    color: white;
+    width: 2%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .custom-nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .top-nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .over-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .myHeader {
+        font-size: 50px;
+    }
+
+    .toggle-btn {
+        padding-right: 10px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        padding-left: 10px !important;
+    }
+
+    .btn {
+        padding: 4px 6px !important;
+        font-size: 12px !important;
+    }
+
+    .right-section {
+        padding-top: 20px;
+    }
+
+    #registerBtn {
+        width: 60px !important;
+    }
+
+    .navbar-nav {
+        display: none !important;
+        flex-direction: column !important;
+        width: 50%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #000;
+        padding: 20px 0;
+        z-index: 1000;
+        align-items: center;
+    }
+
+    .top-nav-items {
+        display: none !important;
+        flex-direction: column !important;
+        width: 51%;
+        height: 280px;
+        position: absolute;
+        top: 106px;
+        right: 0;
+        background: #000;
+        padding: 20px 0;
+        z-index: 999;
+        align-items: flex-end;
+    }
+
+    .top-nav-items>* {
+        margin-top: 6px;
+    }
+
+    .winner-box .trophy-section i {
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+        color: #000000;
+    }
+
+    .winner-tag {
+        background: linear-gradient(90deg, #FCD678 10%, #dcb555 40%, #BC8C2F 90%);
+        width: 168px;
+        position: absolute;
+        top: 15px;  
+        right: -45px;
+        rotate: 45deg;
+        padding: 0.4rem;
+        display: flex;
+        justify-content: center;
+        font-size:20px;
+        font-weight: 500;
+        color: #ffffff;
+        height: 36px;
+    }
+
+    .winner-box .content-section .winner-text {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24.51px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    
+        background: linear-gradient(90deg, #FCD678 10%, #E1AC49 40%, #BC8C2F 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .ms-auto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 4px 6px !important;
+        font-size: 12px !important;
+    }
+
+    .custom-nav {
+        font-size: small;
+    }
+
+    .navbar-nav {
+        display: none !important;
+        flex-direction: column !important;
+        width: 50%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #000;
+        padding: 20px 0;
+        z-index: 1000;
+        align-items: flex-start;
+        font-size: small;
+    }
+
+    .top-nav-items {
+        display: none !important;
+        flex-direction: column !important;
+        width: 53%;
+        height: 257.5px;
+        position: absolute;
+        top: 121px;
+        right: 0;
+        background: #000;
+        z-index: 999;
+        align-items: flex-end !important;
+        font-size: small;
+    }
+
+    .flag-icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        padding-right: 10px;
+        margin-left: auto;
+    }
+
+    .winner-box .content-section .winner-text {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 24.51px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        padding-right: 10px;
+        background: linear-gradient(90deg, #FCD678 10%, #E1AC49 40%, #BC8C2F 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .winner-tag {
+        background: linear-gradient(90deg, #FCD678 10%, #dcb555 40%, #BC8C2F 90%);
+        width: 168px;
+        position: absolute;
+        top: 15px;  
+        right: -45px;
+        rotate: 45deg;
+        padding: 0.2rem;
+        display: flex;
+        justify-content: center;
+        font-size:10px;
+        font-weight: 500;
+        color: #ffffff;
+        height: 20px;
+        
+    }
+
+    .tagLabel {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        user-select: none;
+        padding-left: 15px !important;
+     
+    }
+
+}

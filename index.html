@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Sora:wght@100..800&display=swap" 
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div>
+
+            <!-- Top navigation -->
+            <nav class="navbar navbar-dark top-nav">
+                <div class="container-fluid d-flex align-items-center justify-content-between">
+                    <div class="over-text">Member of Global Markets</div>
+                    <div class="d-flex align-items-center top-nav-items">
+                        <button class="btn btn-outline-secondary btn-sm me-3">
+                            <i class="bi bi-phone me-1"></i>Download App
+                        </button>
+                        <a href="#" class="nav-link text-white px-3 contact">Contact Us</a><span
+                            class="divider">|</span>
+                        
+                        <img src="images/flag1.jpg" alt="English" class="flag-icon ms-3">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main navigation -->
+            <nav class="navbar navbar-dark custom-nav">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="d-flex align-items-center w-100">
+                        <a href="#">
+                            <img src="images/logo_gtg.png" alt="logo" class="logo">
+                        </a>
+                        <div class="navbar-nav d-flex flex-row" id="navMenu">
+                            <a class="nav-link px-3" href="#">Trading</a>
+                            <a class="nav-link px-3" href="#">Markets</a>
+                            <a class="nav-link px-3" href="#">Investing</a>
+                            <a class="nav-link px-3" href="#">Platforms</a>
+                            <a class="nav-link px-3" href="#">Company</a>
+                        </div>
+                        <div class="ms-auto">
+                            <button id="loginBtn" class="btn btn-outline-danger">Login</button>
+                            <button id="registerBtn" class="btn btn-success">Sign Up</button>
+                        </div>
+                        <!-- Toggle button -->
+                        <button class="toggle-btn ms-2" onclick="toggleMenu()">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <div class="main-background">
+                <div class="row justify-content-center">
+                    <h1 class="col-md-8 text-center myHeader">
+                        <span class="gold-text">INVEST TRADE SUCCEED</span>
+                    </h1>
+                    <div class="col-md-6 d-flex justify-content-center">
+                        <div class="card shadow-lg p-3 mb-4 custom-card">
+                            <div class="card-body">
+                                <h3 class="card-title text-center mb-4">Start Your Trading Journey
+                                </h3>
+                                <form>
+                                    <!-- Row 1: First Name, Last Name -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="firstName"
+                                                placeholder="First Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="lastName"
+                                                placeholder="Last Name" required>
+                                        </div>
+                                    </div>
+                                    <!-- Row 2: Country, Code, Phone -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <select id="country" class="form-select" required>
+                                                <option value="">COUNTRY</option>
+                                                <option value="Malta">Malta</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="England">England</option>
+                                                <option value="France">France</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="phoneCode" placeholder="Code"
+                                                required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="tel" class="form-control" id="phone" placeholder="Phone"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <!-- Row 3: Email, Interest -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" id="email" placeholder="Email"
+                                                required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select id="primaryInterest" class="form-select" required>
+                                                <option value="">PRIMARY INTEREST</option>
+                                                <option value="investing">Long-term Investing</option>
+                                                <option value="trading">Active Day Trading</option>
+                                                <option value="markets">Market Analysis</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Row 4: Checkbox -->
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
+                                        <label class="form-check-label" for="privacyPolicy">
+                                            I have read and accepted the <a class="privacy" href="#">Privacy Policy</a>
+                                            and
+                                            <a class="terms" href="#">Terms and Conditions</a>
+                                        </label>
+                                    </div>
+                                    <!-- Submit Button -->
+                                    <div class="text-center">
+                                        <button type="submit" id="submitBtn"
+                                            class="btn btn-success mt-4 btn-lg w-100">JOIN NOW</button>
+                                    </div>
+                                </form>
+                                <!-- Toast Message -->
+                                <div class="toast-container position-fixed top-0 end-0 p-4">
+                                    <div id="toastMessage" class="toast" role="alert" aria-live="assertive"
+                                        aria-atomic="true">
+                                        <div class="toast-header">
+                                            <img src="images/logo_gtg.png" class="rounded me-2"
+                                                style="width: 25px; height: 25px;" alt="logo">
+                                            <strong class="me-auto">Joining Success</strong>
+                                            <button type="button" class="btn-close" data-bs-dismiss="toast"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="toast-body">
+                                            Welcome to the team! You’ve joined successfully.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" style="background-color: #F4F4F4;">
+            <h2 class="text-center mb-5 pt-5 main-content-h2">Why Choose Us?</h2>
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left section -->
+                    <div class="col-md-4 d-flex flex-column align-items-end">
+                        <div class="account-section mb-4" style="width: 178px; height: 178px;">
+                            <i class="bi bi-person-circle fs-1 mb-3"></i>
+                            <p class="text-center">Personalized trading strategies tailored to your goals.</p>
+                        </div>
+                        <div class="account-section" style="width: 178px; height: 178px;">
+                            <i class="bi bi-bar-chart-line fs-1 mb-3"></i>
+                            <p class="text-center">Advanced analytics to stay ahead in the market.</p>
+                        </div>
+                    </div>
+                    <!-- Center image -->
+                    <div class="col-md-4 text-center">
+                        <img src="images/image1.png" alt="Mobile Trading" class="img-fluid mobile-img">
+                    </div>
+                    <!-- Right section -->
+                    <div class="col-md-4">
+                        <div class="account-section mb-4" style="width: 178px; height: 178px;">
+                            <i class="bi bi-shield-lock fs-1 mb-3"></i>
+                            <p class="text-center">Secure platform with top-notch encryption.</p>
+                        </div>
+                        <div class="account-section" style="width: 178px; height: 178px;">
+                            <i class="bi bi-lightning fs-1 mb-3"></i>
+                            <p class="text-center">Fast execution for optimal trading results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Performers -->
+        <div class="container-fluid py-5" style="background-color: #F4F4F4;">
+            <div class="container winners">
+                <h2 class="text-center mb-5 pt-2 main-content-h2">Top Performers</h2>
+                <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-md-6">
+                        <div class="winner-box mb-4">
+                            <div class="trophy-section">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div class="content-section">
+                                
+                                <h4 class="winner-text">MARCH 1st WINNER</h4>
+                                <h6>JOHN DOE</h6>
+                                <p class="text-secondary">7832987221</p>
+                                <h4 class="fw-bold">TOTAL GAIN OF <span class="text-danger">100.00%</span></h4>
+                            </div>
+                        </div>
+                        <div class="winner-box mb-4">
+                            <div class="trophy-section">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div class="content-section">
+                                
+                                <h4 class="winner-text">MARCH 2nd WINNER</h4>
+                                <h6>JANE SMITH</h6>
+                                <p class="text-secondary">9548987886</p>
+                                <h4 class="fw-bold">TOTAL GAIN OF <span class="text-danger">99.32%</span></h4>
+                            </div>
+                        </div>
+                        <div class="winner-box mb-4">
+                            <div class="trophy-section">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <div class="content-section">
+                                
+                                <h4 class="winner-text">MARCH 3rd WINNER</h4>
+                                <h6>MIKE JOHNSON</h6>
+                                <p class="text-secondary">5543987090</p>
+                                <h4 class="fw-bold">TOTAL GAIN OF <span class="text-danger">97.78%</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Section -->
+                    <div class="col-md-6">
+                        <h3 class="mb-4">LEADERBOARD</h3>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-danger">NAME</th>
+                                    <th class="text-end pe-5 text-danger">GAIN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td class="text-end fw-bold pe-4">100.00%</td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td class="text-end fw-bold pe-4">99.32%</td>
+                                </tr>
+                                <tr>
+                                    <td>Mike Johnson</td>
+                                    <td class="text-end fw-bold pe-4">97.78%</td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Williams</td>
+                                    <td class="text-end fw-bold pe-4">96.91%</td>
+                                </tr>
+                                <tr>
+                                    <td>David Brown</td>
+                                    <td class="text-end fw-bold pe-4">95.67%</td>
+                                </tr>
+                                <tr>
+                                    <td>John Davis</td>
+                                    <td class="text-end fw-bold pe-4">94.45%</td>
+                                </tr>
+                                <tr>
+                                    <td>Emily Davis</td>
+                                    <td class="text-end fw-bold pe-4">93.45%</td>
+                                </tr>
+                                <tr>
+                                    <td>James Wilson</td>
+                                    <td class="text-end fw-bold pe-4">93.23%</td>
+                                </tr>
+                                <tr>
+                                    <td>Lisa Anderson</td>
+                                    <td class="text-end fw-bold pe-4">92.76%</td>
+                                </tr>
+                                <tr>
+                                    <td>Alan Johnson</td>
+                                    <td class="text-end fw-bold pe-4">92.54%</td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Taylor</td>
+                                    <td class="text-end fw-bold pe-4">91.54%</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary Thomas</td>
+                                    <td class="text-end fw-bold pe-4">90.32%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="pt-1">Our best traders consistently achieve remarkable gains. Join them today!</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs -->
+    <div class="container-fluid py-3 faq" style="background-color:#F4F4F4;">
+        <h1 class="text-center main-content-h2">FAQs</h1>
+        <div class="container accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item" style="background-color:#F4F4F4;">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                        style="background-color:#F4F4F4;">
+                        How do I get started?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Sign up, and fund your account via bank transfer or card to begin trading.</div>
+                </div>
+            </div>
+            <div class="accordion-item" style="background-color: #F4F4F4;">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                        style="background-color: #F4F4F4;">
+                        What are the trading costs?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">We offer zero-commission trading on major assets.</div>
+                </div>
+            </div>
+            <div class="accordion-item" style="background-color: #F4F4F4;">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+                        style="background-color: #F4F4F4;">
+                        Is my money safe?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Your assets are protected by 256-bit encryption.</div>
+                </div>
+            </div>
+            <div class="accordion-item" style="background-color: #F4F4F4;">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseTwo"
+                        style="background-color: #F4F4F4;">
+                        Can I practice first?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Yes, our free Demo Account provides virtual funds so you can test strategies in real-time.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Left Section -->
+                <div class="col-md-5">
+                    <h4 class="mb-4">Follow Us</h4>
+                    <div class="social-icons d-flex gap-3 mb-4">
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube fs-4"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-telegram fs-4"></i></a>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-outline-light btn-sm contact" data-bs-toggle="modal" data-bs-target="#contactModal">
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Section -->
+                <div class="col-md-7 right-section">
+                    <h4 class="mb-4">Risk Warning</h4>
+                    <p class="mb-4" style="color: #999999;">
+                        Trading and investing inglude risk and may not be suitable for all individuals. 
+                        Prices of financial instruments can fluctuate rapidly and may result in the loss of some or all of your invested money.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Us Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-custom-gray text-black">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-custom-gray text-black">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="validation.js" type="text/javascript"></script>
+</body>
+
+</html>
