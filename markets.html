@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&family=Sora:wght@100..800&display=swap" 
+    rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <!-- Top navigation -->
+            <nav class="navbar navbar-dark top-nav">
+                <div class="container-fluid d-flex align-items-center justify-content-between">
+                    <div class="over-text">Member of Global Markets</div>
+                    <div class="d-flex align-items-center top-nav-items">
+                        <button class="btn btn-outline-secondary btn-sm me-3">
+                            <i class="bi bi-phone me-1"></i>Download App
+                        </button>
+                        <a href="#" class="nav-link text-white px-3 contact">Contact Us</a><span
+                            class="divider">|</span>
+                        <img src="images/flag1.jpg" alt="English" class="flag-icon ms-3">
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main navigation -->
+            <nav class="navbar navbar-dark custom-nav">
+                <div class="container-fluid d-flex align-items-center">
+                    <div class="d-flex align-items-center w-100">
+                        <a href="index.html">
+                            <img src="images/logo_gtg.png" alt="logo" class="logo">
+                        </a>
+                        <div class="navbar-nav d-flex flex-row" id="navMenu">
+                            <a class="nav-link px-3" href="trading.html">Trading</a>
+                            <a class="nav-link px-3" href="investing.html">Investing</a>
+                            <a class="nav-link px-3" href="platforms.html">Platforms</a>
+                            <a class="nav-link px-3" href="company.html">Company</a>
+                        </div>
+                        <div class="ms-auto">
+                            <button id="loginBtn" class="btn btn-outline-danger">Login</button>
+                            <button id="registerBtn" class="btn btn-success">Sign Up</button>
+                        </div>
+                        <!-- Toggle button -->
+                        <button class="toggle-btn ms-2" onclick="toggleMenu()">
+                            <i class="bi bi-list"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container-fluid d-flex flex-column" style="min-height: calc(100vh - 150px); background-color: #F4F4F4;">
+                <h1 class="text-center mb-4">Markets</h1>
+                <table class="table table-success table-hover w-100">
+                    <thead>
+                        <tr>
+                            <th>Market</th>
+                            <th>Status</th>
+                            <th>Volume</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Market 1</td>
+                            <td>Open</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Market 2</td>
+                            <td>Closed</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>Market 3</td>
+                            <td>Open</td>
+                            <td>750</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-black text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Section -->
+                    <div class="col-md-5">
+                        <h4 class="mb-4">Follow Us</h4>
+                        <div class="social-icons d-flex gap-3 mb-4">
+                            <a href="#" class="text-secondary"><i class="bi bi-facebook fs-4"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-instagram fs-4"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-twitter-x fs-4"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-4"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-youtube fs-4"></i></a>
+                            <a href="#" class="text-secondary"><i class="bi bi-telegram fs-4"></i></a>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-outline-light btn-sm contact" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                Contact Us
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Right Section -->
+                    <div class="col-md-7 right-section">
+                        <h4 class="mb-4">Risk Warning</h4>
+                        <p class="mb-4" style="color: #999999;">
+                            Trading and investing inglude risk and may not be suitable for all individuals. 
+                            Prices of financial instruments can fluctuate rapidly and may result in the loss of some or all of your invested money.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="validation.js" type="text/javascript"></script>
+</body>
+
+</html>
